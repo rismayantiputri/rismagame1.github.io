@@ -1,0 +1,68 @@
+:root {
+  background: aliceblue;
+}
+
+h1,
+h2 {
+  font-size: 60px;
+  text-align: center;
+  font-family: arial;
+  margin: 10px;
+}
+
+h1 span {
+  color: darkred;
+}
+
+button {
+  display: block;
+  margin: auto;
+  color: red;
+}
+
+button:active {
+  color: green;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  cursor: url(../img/palu1.png), auto;
+}
+
+.container:active {
+  cursor: url(../img/palu2.png), auto;
+}
+
+.jerami {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.jerami::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: url(../img/jerami.png) bottom center no-repeat;
+  background-size: 80%;
+  position: absolute;
+  bottom: -20px;
+}
+
+.kucing {
+  width: 100%;
+  height: 100%;
+  background: url(../img/kucing3.png) bottom center no-repeat;
+  background-size: 70%;
+  position: absolute;
+  top: 100px;
+  transition: top 0.3s;
+}
+
+.jerami.muncul .kucing {
+  top: -15px;
+}
